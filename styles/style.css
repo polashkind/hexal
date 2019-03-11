@@ -94,13 +94,18 @@ h1 {
 }
 
 .header {
+  height: 63px;
+  width: 100%;
+  background: #353535;
+}
+
+.header-wrapper {
   display: flex; 
   flex-direction: row;
   justify-content: center; 
-  height: 63px;
+  height: 100%;
   width: 1020px;
-  /* padding-top: 30px;  */
-  background: #353535;
+  margin: 0 auto;
 }
 
 .left-nav {   
@@ -126,29 +131,38 @@ a:hover {
   color: #2eb398;
 }
 
-.main { 
+.main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #bad1ca;
-  width: 1020px;
+  margin: 0 auto;
 } 
 
-.triangle {
+main::before {
+  content: "";
+  display: block;
+  position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 25px 50px 0 50px;
   border-color: #353535 transparent transparent transparent;
-  display: flex;
-  align-self: center;
 }
 
 .slider {
+  height: 720px;
+  width: 100%;
+}
+
+.slider-wrapper {
   display: flex;
   flex-direction: column;
   height: 720px;
   padding: 65px 15px;
+  height: 100%;
+  margin: 0 auto;
+  width: 1020px;
 }
 
 .slider-row {
@@ -230,17 +244,23 @@ a:hover {
   font-family: 'MyriadProRegular', sans-serif;
   height: 341px;
   background: #2eb398;
+  width: 100%;
+}
+
+.profile-wrapper {
   display: flex;
   align-items: center;
-  /* padding-left: 30px;  */
   width: 1020px;
+  margin: 0 auto; 
 }
 
 .profile-text {
   font-family: 'MyriadProRegular', sans-serif;
+  padding: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  margin: 0 auto;
 }
 
 .text1 {
@@ -277,12 +297,16 @@ p {
 }
 
 .contact {
-  display: flex;
-  flex-direction: row;
   height: 564px;
   background: #323232;
-  /* padding: 30px 50px; */
+  width: 100%;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
   width: 1020px;
+  margin: 0 auto;
 }
 
 .bottom {
@@ -344,5 +368,10 @@ p {
   background-color: #222222;
   color: #353535;
   height: 43px;
-  width: 1020px;
+  width: 100%;
+}
+
+.footer.wrapper {
+    width: 1020px;
+    margin: 0 auto;
 }
