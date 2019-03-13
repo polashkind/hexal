@@ -93,6 +93,10 @@ h1 {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   height: 63px;
   width: 100%;
@@ -110,26 +114,41 @@ h1 {
 
 .left-nav {   
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 200px;
-  text-align: center;
+  line-height: 4em;
+  text-transform: uppercase; /* Заглавные буквы */
+  font-family: "MyriadProRegular", sans-serif;
+}
+
+.logo {
+  margin-top: 6px;
 }
 
 .right-nav { 
   display: flex;
-  justify-content: flex-start;
-  width: 200px; 
-  text-align: center;
+  justify-content: center;
+  width: 200px;
+  line-height: 4em;
+  text-transform: uppercase; /* Заглавные буквы */
+  font-family: "MyriadProRegular", sans-serif;
 }   
 
-a {
-  text-decoration: none;
+.header a {
+  display: flex;
   color: #d6d6d6;
 }
 
-a:hover {
+.header a:hover {
   color: #2eb398;
 }
+
+.blog::after, 
+.portfolio::after {
+  content: ".";
+  color: #484c5f;
+  margin: -5px 17px;
+}  
 
 .main {
   width: 100%;
@@ -159,7 +178,7 @@ main::before {
   display: flex;
   flex-direction: column;
   height: 720px;
-  padding: 65px 15px;
+  padding: 65px 11px;
   height: 100%;
   margin: 0 auto;
   width: 1020px;
@@ -267,18 +286,23 @@ main::before {
   font-family: 'Maven Pro', sans-serif;
   color: #b4eadf;
   font-size: 22px;
+  letter-spacing: 1px;
+  font-size: 30px;
   }
 
 .text2 {
   font-family: 'Maven Pro', sans-serif;
   color: #20816d;
   font-size: 17px;
+  letter-spacing: 0.5px;
 }
 
-p {
+.main p {
   font-family: 'MyriadProRegular', sans-serif;
   color: #b4eadf;
   font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .social {
@@ -294,6 +318,7 @@ p {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background: url("../images/14.png");
   background-position: -115px 1px; 
+  margin-top: 70px;
 }
 
 .contact {
@@ -317,6 +342,18 @@ p {
   width: 90px;
   height: 37px;
   border: none;
+}
+
+.Getintouch,
+.Inordertogetintouch {
+  color: #e0e0e0;
+  font-family: 'Maven pro', sans-serif;
+  letter-spacing: 0;
+  font-size: 25px;
+}
+
+.Inordertogetintouch {
+  font-size: 20px;
 }
 
 .name, 
@@ -347,13 +384,14 @@ p {
   width: 580px;
 }
 
-.leftPart {
+.leftPart {  
+  margin-top: 75px;
   padding-left: 50px; 
   font-family: 'Maven Pro', sans-serif;
 }
 
 .RightPart {
-  /* width: 180px; */
+  margin-top: 30px;
   font-family: 'MyriadProRegular', sans-serif;
   padding: 40px 20px;
 }
@@ -363,12 +401,23 @@ p {
   font-family: 'MyriadProRegular', sans-serif;
 }
 
-.footer {
+.RightPart p{
+  color: #bebebe;
   font-family: 'MyriadProRegular', sans-serif;
+  padding-left: 0;
+}
+
+.footer {
   background-color: #222222;
-  color: #353535;
   height: 43px;
   width: 100%;
+}
+
+.footer p {
+  font-family: "MariadProRegular", "Maven pro regular",sans-serif;
+  color: #343434;
+  margin-left: 40px;
+  line-height: 3em;
 }
 
 .footer.wrapper {
